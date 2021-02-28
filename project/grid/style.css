@@ -4,10 +4,9 @@
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 2fr 1fr 2fr;
-    grid-column-gap: 40px;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
     background-color: #f3efe2;
-
-
 }
 
 .header {
@@ -36,9 +35,7 @@
     grid-column: 1/ 2;
     background-color: #f8e9b7;
     text-align: center;
-    padding-bottom: 5px;
-
-
+    padding: 5px;
 }
 
 .content-3 {
