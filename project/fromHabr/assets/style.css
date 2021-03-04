@@ -2,7 +2,7 @@
     display: grid;
     width: 100vw;
     height: 100vh;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-template-rows: repeat(2, 100px);
     grid-gap: 5px;
 }
