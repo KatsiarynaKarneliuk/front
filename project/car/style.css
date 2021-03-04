@@ -78,13 +78,13 @@
 
 .content-1 {
     grid-area: 2 / 2 / 4/ 2;
-    background-image: url("../grid/img/Image№1.png");
+    background-image: url("../car/img/Image№1.png");
 }
 
 .content-2 {
     grid-row: 2/ 3;
     grid-column: 3/ 5;
-    background-image: url("../grid/img/Image№4.png");
+    background-image: url("../car/img/Image№4.png");
     ;
 }
 
@@ -102,33 +102,33 @@
 .content-5 {
     grid-row: 3/ 4;
     grid-column: 3/ 4;
-    background-image: url("../grid/img/Image№3.png");
+    background-image: url("../car/img/Image№3.png");
 }
 
 
 .content-6 {
     grid-row: 3/ 4;
     grid-column: 4/ 5;
-    background-image: url("../grid/img/Image_5.png");
+    background-image: url("../car/img/Image_5.png");
 }
 
 .content-7 {
     grid-row: 4/ 5;
     grid-column: 2/ 3;
-    background-image: url("../grid/img/Image_5.png");
+    background-image: url("../car/img/Image_5.png");
 }
 
 .content-8 {
     grid-row: 4/5;
     grid-column: 3/4;
-    background-image: url("../grid/img/Image_5.png");
+    background-image: url("../car/img/Image_5.png");
 }
 
 
 .content-9 {
     grid-row: 4/5;
     grid-column: 4/5;
-    background-image: url("../grid/img/Image_5.png");
+    background-image: url("../car/img/Image_5.png");
 }
 
 .footer {
