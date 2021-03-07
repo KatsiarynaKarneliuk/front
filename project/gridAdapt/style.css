@@ -37,7 +37,6 @@
     background-color: #f8e9b7;
     text-align: center;
     padding: 30px;
-    margin-left: 20px;
 }
 
 .content-3 {
@@ -45,7 +44,6 @@
     background-color: #f8e9b7;
     text-align: center;
     padding: 30px;
-    margin-right: 20px;
 }
 
 .content-4 {
@@ -53,7 +51,6 @@
     background-color: #f8e9b7;
     text-align: center;
     padding: 30px;
-    margin: 20px;
 }
 
 @media screen and (min-width:1024px) {
