@@ -1,15 +1,15 @@
 .container {
     display: grid;
-    width: 100vw;
+    width: 100%;
     height: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 1%;
     grid-template-areas:
         "header header header header header"
-        ".  main main main ."
-        ".  main main main  ."
-        ".  section section sidebar ."
+        " .  main main main . "
+        " .  main main main  . "
+        " .  section section sidebar . "
         "footer footer footer footer footer"
 }
 
@@ -27,7 +27,6 @@
 .menu {
     grid-area: menu;
     text-align: center;
-
 }
 
 .nav-item {
@@ -42,89 +41,88 @@
 
 .main {
     grid-area: main;
-    width: 100%;
-    height: 100%;
     display: grid;
     gap: 5px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
-        "content-1 content-2 content-2"
-        "content-1 content-5 content-6"
+        "content-1 content-2 content-3"
+        "content-1 content-4 content-5"
 }
 
 .content-1 {
     grid-area: content-1;
-    background-image: url("img/Image№1.png");
+    background-image: url("img/2cell.png");
     background-repeat: no-repeat;
-    max-width: 100%;
-    height: 100%;
-    border: 1px solid red;
-
+    background-size: 100% 100%;
 }
 
 .content-2 {
     grid-area: content-2;
-    background-image: url("img/Image№4.png");
+    background-image: url("img/yellowCar.png");
     background-repeat: no-repeat;
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: 1px solid red;
+    background-size: 100% 100%;
+}
 
+.content-3 {
+    grid-area: content-3;
+    background-image: url("img/grayCar.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.content-4 {
+    grid-area: content-4;
+    background-image: url("img/bmw.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .content-5 {
     grid-area: content-5;
-    background-image: url("img/Image№3.png");
+    background-image: url("img/oldCar.png");
     background-repeat: no-repeat;
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-}
-
-.content-6 {
-    grid-area: content-6;
-    background-image: url("img/Image_5.png");
-    background-repeat: no-repeat;
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;
+    background-size: 100% 100%;
 }
 
 .section {
     grid-area: section;
-    border: 1px solid red;
     grid-template-areas:
         "section-1 section-1 aside"
         "section-1 csection-1 aside"
 }
 
 .img {
+    grid-area: section-1;
+    position: relative;
     max-width: 100%;
-    height: 100%;
+    max-height: 100%;
     object-fit: cover;
-    border: 1psx solid #b3ecf9;
+    border: 1px solid #ec1426;
 }
 
 .white-box {
+    grid-area: section-1;
     position: relative;
-    width: 730px;
-    height: 249px;
-    left: 408px;
-    top: 1082px;
-    border: 1psx solid red;
+    width: 90%;
+    height: 20%;
+    background: olivedrab;
+    margin: 5%;
 }
 
 p {
-    font-family: PT Sans;
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 24px;
     color: #666666;
+}
+
+.aside {
+    grid-area: aside;
+    background: rgb(40, 72, 179);
+    background-image: url("img/aside1/Bitmap.png")
 }
 
 .footer {
