@@ -92,7 +92,7 @@
         "section-1 csection-1 aside"
 }
 
-.img {
+.section__image {
     grid-area: section-1;
     position: relative;
     max-width: 100%;
@@ -101,16 +101,17 @@
     border: 1px solid #ec1426;
 }
 
-.white-box {
+.section__white-box {
     grid-area: section-1;
     position: relative;
     width: 90%;
     height: 20%;
     background: olivedrab;
     margin: 5%;
+    z-index: 1;
 }
 
-p {
+.section__text {
     font-family: "PT Sans";
     font-style: normal;
     font-weight: normal;
@@ -122,7 +123,25 @@ p {
 .aside {
     grid-area: aside;
     background: rgb(40, 72, 179);
-    background-image: url("img/aside1/Bitmap.png")
+}
+
+.aside__button {
+    Width: 267px;
+    ;
+    padding: 5px;
+    Height: 51.17px;
+    Top: 387.83px;
+    position: relative;
+    z-index: 1;
+}
+
+.aside__text {
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    color: #666666;
 }
 
 .footer {
