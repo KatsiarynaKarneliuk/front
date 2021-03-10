@@ -103,11 +103,13 @@
 
 .subsection__white-box {
     grid-area: section-1;
-    position: absolute;
+    position: relative;
     width: 90%;
     height: 20%;
-    background: olivedrab;
-    z-index: 100;
+    background: rgb(245, 247, 241);
+    bottom: 10%;
+    left: 5%;
+
 }
 
 .subsection__text {
@@ -117,8 +119,6 @@
     font-size: 14px;
     line-height: 24px;
     color: #666666;
-    position: absolute;
-    z-index: 200;
 }
 
 .aside {
