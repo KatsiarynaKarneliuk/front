@@ -87,6 +87,7 @@
 
 .section {
     grid-area: section;
+    position: relative;
     grid-template-areas:
         "section-1 section-1 aside"
         "section-1 csection-1 aside"
@@ -98,17 +99,16 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
-    border: 1px solid #ec1426;
 }
 
 .section__white-box {
     grid-area: section-1;
-    position: relative;
+    position: absolute;
     width: 90%;
     height: 20%;
     background: olivedrab;
     margin: 5%;
-    z-index: 1;
+    z-index: -2;
 }
 
 .section__text {
@@ -127,7 +127,6 @@
 
 .aside__button {
     Width: 267px;
-    ;
     padding: 5px;
     Height: 51.17px;
     Top: 387.83px;
