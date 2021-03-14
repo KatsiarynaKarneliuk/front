@@ -1,0 +1,44 @@
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+.navbar {
+    height: 10%;
+}
+
+.btn {
+    background: #5222D0;
+    color: white;
+    border-radius: 100px;
+}
+
+.subscription__btn {
+    background: #5222D0;
+    color: white;
+    border-radius: 100px;
+    text-align: start;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.cardsWithImage {
+    height: 45%;
+}
+
+.cardsWithoutImage {
+    height: 30%;
+}
+
+.subscription {
+    background-image: url("img/Rectangle11.png");
+    color: white;
+    justify-content: flex-start;
+
+}
+
+.footer {
+    height: 10%;
+
+}
