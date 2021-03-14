@@ -1,0 +1,27 @@
+.main-content {
+    min-height: 240px;
+    background: #9cbdee;
+}
+
+.sidebar-content1 {
+    min-height: 30px;
+    margin-bottom: 10px;
+    background: #9cbdee;
+}
+
+.sidebar-content2 {
+    min-height: 200px;
+    margin-bottom: 10px;
+    background: #9cbdee;
+}
+
+.content3 {
+    min-height: 130px;
+    background: #9cbdee;
+    margin-bottom: 10px;
+}
+
+.content4 {
+    min-height: 130px;
+    background: #9cbdee;
+}
