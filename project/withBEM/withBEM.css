@@ -1,12 +1,3 @@
-.container {
-    height: 100%;
-    width: 100%;
-}
-
-.navbar {
-    height: 10%;
-}
-
 .btn {
     background: #5222D0;
     color: white;
@@ -18,27 +9,78 @@
     color: white;
     border-radius: 100px;
     text-align: start;
-    margin-right: 10%;
+    margin-right: 65%;
     margin-top: 10%;
     margin-bottom: 10%;
+    text-align: center;
+    height: 3vh;
 }
 
-.cardsWithImage {
-    height: 45%;
-}
 
-.cardsWithoutImage {
-    height: 30%;
+.card {
+    width: 31%;
 }
 
 .subscription {
     background-image: url("img/Rectangle11.png");
     color: white;
     justify-content: flex-start;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 5%;
 
 }
 
-.footer {
-    height: 10%;
+h5 {
+    font-family: Intro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 120%;
+    color: #000000;
+}
 
+p {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 160%;
+    color: #000000;
+}
+
+.subscription__title {
+    font-family: Intro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+.nav {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 160%;
+    color: #0000
+}
+
+.first {
+    position: relative;
+}
+
+.card-img-top {
+    position: relative;
+    z-index: 1;
+}
+
+.card-img-top1 {
+    position: absolute;
+    z-index: 2;
+    width: 75%;
+    bottom: 195px;
+    height: 55%;
+    left: 5%;
 }
