@@ -21,15 +21,14 @@
   display: -ms-grid;
   display: grid;
   margin: 0 auto;
-  row-gap: 25%;
+  row-gap: 5%;
   -webkit-column-gap: 1px;
   column-gap: 1px;
   background-image: url(image/Карелия.jpg);
   background-size: cover;
   -ms-grid-columns: 25% 50% 25%;
   grid-template-columns: 25% 50% 25%;
-  -ms-grid-rows: 10% 30% 10%;
-  grid-template-rows: 10% 30% 10%;
+  grid-template-rows: 10% 80% 10%;
   grid-template-areas: "header header header"
     " .    central-part  . "
     " .    arrow  . ";
@@ -102,7 +101,7 @@
 
 .logo__title {
   font-family: 'Roboto', sans-serif;
-  font-size: 2em;
+  font-size: 1em;
   font-weight: 900;
   color: #fff;
   text-decoration: none;
@@ -351,13 +350,14 @@
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: central-part;
+
   width: 100%;
 }
 
 .central-part__title {
   width: 100%;
   font-family: 'Roboto', sans-serif;
-  font-size: 4.5em;
+  font-size: 3em;
   font-weight: bold;
   color: #fff;
   text-align: center;
@@ -368,7 +368,7 @@
 .central-part__subtitle {
   width: 100%;
   font-family: 'Roboto', sans-serif;
-  font-size: 1.38em;
+  font-size: 1em;
   font-weight: bold;
   color: #fff;
   text-align: center;
@@ -377,7 +377,7 @@
 
 @media screen and (max-width: 768px) {
   .central-part__title {
-    font-size: 3em;
+    font-size: 2em;
   }
 
   .central-part__subtitle {
@@ -393,6 +393,7 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  padding-bottom: 10%;
 }
 
 .central-part__btn {
@@ -414,7 +415,7 @@
   align-items: center;
   padding: 2% 5%;
   font-family: 'Roboto', sans-serif;
-  font-size: 1em;
+  font-size: 0.7em;
   font-weight: bold;
   color: #fff;
   border-radius: 3px;
@@ -422,6 +423,73 @@
   text-decoration: none;
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px 0px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px 0px;
+}
+
+#avatar {
+  position: relative;
+  left: 6px;
+  top: 5px;
+
+  border-radius: 3px;
+  height: 50px;
+  margin-bottom: 2%;
+
+}
+
+.avatar {
+
+  background-color: #fff;
+  width: 90px;
+  height: 60px;
+
+  border-radius: 3px;
+  margin-bottom: 2%;
+
+
+}
+
+#avatar::placeholder {
+  line-height: 10px;
+  display: flex;
+  text-indent: 5%;
+}
+
+.form {
+  display: grid;
+  gap: 20%;
+  height: 20%;
+  margin-bottom: 5%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "name fname"
+    "phone email"
+}
+
+input {
+  text-indent: 5%;
+  border-radius: 3px;
+}
+
+input::placeholder {
+  text-indent: 5%;
+  color: rgb(231, 225, 226);
+}
+
+input[type=button] {
+  display: flex;
+  justify-content: center;
+  border-radius: 3px;
+  background-color: #f5914f;
+  padding: 1% 2%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.selected {
+  color: #f5914f;
 }
 
 /*Стрелка внизу блока*/
