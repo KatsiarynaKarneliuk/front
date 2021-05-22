@@ -1,0 +1,43 @@
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    display: flex;
+}
+
+
+.slider {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+}
+
+.slider .photo {
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+/* Кнопки вперед и назад */
+.slider .left-arrow,
+.slider .right-arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    background-color: rgb(216, 216, 205);
+}
+
+.slider .right-arrow {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
