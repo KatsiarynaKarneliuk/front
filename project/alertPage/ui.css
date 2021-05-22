@@ -373,6 +373,7 @@
   color: #fff;
   text-align: center;
   padding-bottom: 5%;
+  background-color: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -462,7 +463,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
-    "name fname"
+    "fname lname"
     "phone email"
 }
 

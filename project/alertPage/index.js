@@ -1,14 +1,11 @@
 function clickMe(){
-    let checks = document.getElementsByClassName('form');
-        console.log(checks[0].value);
-        console.log(checks[1].value);
-        console.log(checks[3].value);
-        console.log(checks[4].value);
-    return checks
+    let fname = document.getElementById('fname').value;
+    let lname = document.getElementById('lname').value;
+    let phone = document.getElementById('phone').value;
+    let email = document.getElementById('email').value;
+    let allvalue=[fname, lname, phone, email];
+    alert("Проверьте, пожалуйста, верно ли вы ввели: " + allvalue);
 }
-function askTheName () {
-    alert(проверьте, пожалуйста, верны ли данные ' + checks);
-}    
 
 function changeMe(){
     let avatarChange = document.getElementById('avatar');
