@@ -1,9 +1,13 @@
+body {
+    background-color: rgb(250, 244, 233);
+}
+
 .numberInput {
     width: 100px;
 }
 
-.button {
-    width: 100px;
+.btn {
+    width: 40px;
 }
 
 .result {

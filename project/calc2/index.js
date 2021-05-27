@@ -31,8 +31,8 @@ function showDivis(){
     let a=document.getElementById('firstNumber').value;  
     let b=document.getElementById('secondNumber').value;
     document.getElementById('result').value = divis(a,b);
-    if(a/0){
-        alert("Делить на '0' нельзя")
+    if(b==0){
+        document.getElementById('result').value="Делить на '0' нельзя"
     } 
 }
 
