@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>signin</title>
+</head>
+
+<body>
+    <div class="wrapper">        
+        <div class="form">
+            <header class="header">Регистрация</header>
+            <div class="fields">
+                <input type="text" class="fname" id="fname" placeholder="Имя">
+                <div class ="errorMessage" id="errorMessageFname"></div>
+                <input type="text" class="lname" id="lname" placeholder="Фамилия">
+                <div class ="errorMessage" id="errorMessageLname"></div>
+                <input type="text" class="login" id="login" placeholder="Придумайте логин">
+                <div  class ="errorMessage" id="errorMessageLogin"></div>
+                <input type="email" class="email" id="email" placeholder="Email">
+                <div class ="errorMessage" id="errorMessageEmail"></div>
+                <input type="password" class ="password" id="password" placeholder="Придумайте пароль">
+                <div class ="errorMessage" id="errorMessagePassword"></div>
+                <input type="password" class ="password" id="password1" placeholder="Повторите пароль">
+                <div class ="errorMessage" id="errorMessagePassword1"></div>
+            </div>
+            <button type="button" class = "submit" id="btn">Зарегистрироваться</button>
+            <div class="popup"></div>
+            <div class="signup">
+                <p>Уже есть аккаунт на Яндексе?
+                <a class="registration" href="https://passport.yandex.ru/auth?mode=register"
+                            title="Войти">Войти</a></p>       
+            </div>  
+        </div>
+        
+    </div>        
+<script src="index.js"></script>
+</body>
+</html>
