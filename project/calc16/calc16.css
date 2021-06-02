@@ -1,0 +1,55 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    font-weight: 700;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    padding: 5%;
+    width: 600px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-color: rgb(22, 22, 22);
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 8px;
+
+}
+
+.dropdown {
+    margin: 5% 0 5% 0;
+}
+
+.fieldName {
+    display: flex;
+    padding: 10px;
+    height: 50px;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+p {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.form_radio {
+    margin: 2%;
+}
+
+.checkbox {
+    margin: 5%
+}
+
+.button {
+    margin-left: 5%;
+    margin-bottom: 5%;
+}

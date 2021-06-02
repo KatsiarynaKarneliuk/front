@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calc16.css">
+    <title>querySelector</title>
+</head>
+<body>
+
+    <div class ="wrapper">
+        <input class="form">
+            <header class="header">Калькулятор стоимости б/у авто</header>
+            <div class="fieldName"><p>Страна отправки машины</p></div>
+            <select id="country" onChange="selectCountry(this.value)" class="dropdown">
+                <option value="none">Не выбрано</option>
+                <option value="gem">Германия</option>
+                <option value="amer">Америка</option>
+            </select>
+            <select class="cities" style="display:none;"></select>
+            <div class="fieldName"><p>Выбери тип машины</p></div>
+            <select id="typeOfCar" onChange="selectType(this.value)" class="dropdown">
+                <option value="none">Не выбрано</option>
+                <option value="one">Легковая</option>
+                <option value="two">Грузовая</option>
+            </select>
+            <div class="form_radio">
+                <input id="radio-1" type="radio" name="radio" value="1">
+                <label for="radio-1">Целый автомобиль</label>
+            </div>
+            <div class="form_radio">
+                <input id="radio-2" type="radio" name="radio" value="2">
+                <label for="radio-2">Распил</label>
+            </div>
+            <div class ="checkbox">
+                <input type="checkbox" >
+                <label for="radio-1">Самовывоз</label>
+            </div>
+            <div>
+                <button class = "button" type="button" id="btn">Посчитать</button>
+            </div> 
+        </div>
+    </div> 
+<script src="calc16.js"></script>                  
+</body>
+</html>
