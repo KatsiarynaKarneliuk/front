@@ -8,6 +8,8 @@ let login =document.getElementById('login').value;
 let email =document.getElementById('email').value;
 let password =document.getElementById('password').value;
 let password1 =document.getElementById('password1').value;
+let allValue = [fname,lname,login,email,password,password1];
+
 if (fname==""){
     document.getElementById("errorMessageFname").innerHTML +="Это поле обязательно для заполнения";}
 if (lname==""){
@@ -20,10 +22,11 @@ if (password==""){
     document.getElementById("errorMessagePassword").innerHTML +="Это поле обязательно для заполнения";}
 if (password1==""){
     document.getElementById("errorMessagePassword1").innerHTML +="Это поле обязательно для заполнения";}
-                      
-else{    
-    document.getElementById("popup").innerHTML +="Добро пожаловать," + fname;
-    popup.toggle("show");
-  }    
+if (allValue.length ==6){
+    document.getElementsByClassName("successMessage").innerHTML +="Добро пожаловать," + fname;
+        }
 }
+
+
+
 
