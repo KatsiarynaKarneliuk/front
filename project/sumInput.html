@@ -9,15 +9,15 @@
 <body>
 <script>
     function sumInput(){
-        numbers=[];
+        arr=[];
         while(true){
             let val=prompt("Введите число", 0);
             if(val===""||val===null||!isFinite(val)) break;
-            numbers.push(+val);   
+            arr.push(+val);   
             }
         sum=0;
-        for(let number of numbers){
-            sum+=number;
+        for(let ar of arr){
+            sum+=ar;
         } 
     return sum;   
     }
