@@ -1,0 +1,67 @@
+.wrapper {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("images/Autumn_Pumpkin_Book_Foliage_573308_1280x853.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    background-color: #fff;
+    border-radius: 3px;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    height: 700px;
+
+
+}
+
+.fields {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 100px;
+}
+
+.fio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 100px;
+    margin-bottom: 5%;
+}
+
+.button {
+    padding: 2%;
+    margin: 2%;
+}
+
+.fname,
+.lname,
+.middle_name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 50px;
+    border-style: solid;
+    border-width: 1px;
+    margin: 5%;
+
+
+}
