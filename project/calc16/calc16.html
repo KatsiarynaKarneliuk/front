@@ -20,7 +20,7 @@
             </select>
             <select  id="cities" style="display: none;" class="dropdown"></select>
             <div class="fieldName"><p>Выбери тип машины</p></div>
-            <select id="typeOfCar" onChange="selectType(this.value)" class="dropdown">
+            <select id="typeOfCar"  class="dropdown">
                 <option value="none">Не выбрано</option>
                 <option value="one">Легковая</option>
                 <option value="two">Грузовая</option>
@@ -34,10 +34,10 @@
             </div>
             <div class ="checkbox">
                 <input type="checkbox" >
-                <label for="checkbox-1">Самовывоз</label>
+                <label for="checkbox-1">Услуги доставки</label>
             </div>
             <div class = "button">
-                <button  type="button" class = "btn" id="btn">Посчитать</button>
+                <button  type="button" class = "btn" id="btn" class="button" onClick="sumAll()" >Посчитать</button>
             </div> 
         </div>   
     </div>
