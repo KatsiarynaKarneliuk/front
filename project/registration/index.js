@@ -12,18 +12,18 @@ let allValue = [fname,lname,login,email,password,password1];
 
 if (fname==""){
     document.getElementById("errorMessageFname").innerHTML +="Это поле обязательно для заполнения";}
-if (lname==""){
-    document.getElementById("errorMessageLname").innerHTML +="Это поле обязательно для заполнения";}
-if (login==""){
-    document.getElementById("errorMessageLogin").innerHTML +="Это поле обязательно для заполнения";}
-if (email==""){
-    document.getElementById("errorMessageEmail").innerHTML +="Это поле обязательно для заполнения";}
-if (password==""){
-    document.getElementById("errorMessagePassword").innerHTML +="Это поле обязательно для заполнения";}
-if (password1==""){
-    document.getElementById("errorMessagePassword1").innerHTML +="Это поле обязательно для заполнения";}
-if (allValue.length ==6){
-    document.getElementsByClassName("successMessage").innerHTML +="Добро пожаловать," + fname;
+    else if (lname==""){
+        document.getElementById("errorMessageLname").innerHTML +="Это поле обязательно для заполнения";}
+    else if (login==""){
+        document.getElementById("errorMessageLogin").innerHTML +="Логин необходим для входа в систему";}
+    else if (email==""){
+        document.getElementById("errorMessageEmail").innerHTML +="Email необходим для входа в систему";}
+    else if (password==""){
+        document.getElementById("errorMessagePassword").innerHTML +="Пароль должен содержать как минимум 6 симфолов, одну заглавную букву";}
+    else if (password1==""){
+        document.getElementById("errorMessagePassword1").innerHTML +="Пароли должны совпадать";}
+    else if (allValue.length ==6){
+        document.getElementById("successMessage").innerHTML +="Добро пожаловать," + fname;
         }
 }
 

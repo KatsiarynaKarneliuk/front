@@ -14,21 +14,35 @@
         <div class="form">
             <header class="header">Регистрация</header>
             <div class="fields">
-                <input type="text" class="fname" id="fname" placeholder="Имя">
-                <div class ="errorMessage" id="errorMessageFname"></div>
-                <input type="text" class="lname" id="lname" placeholder="Фамилия">
-                <div class ="errorMessage" id="errorMessageLname"></div>
-                <input type="text" class="login" id="login" placeholder="Придумайте логин">
-                <div  class ="errorMessage" id="errorMessageLogin"></div>
-                <input type="email" class="email" id="email" placeholder="Email">
-                <div class ="errorMessage" id="errorMessageEmail"></div>
-                <input type="password" class ="password" id="password" placeholder="Придумайте пароль">
-                <div class ="errorMessage" id="errorMessagePassword"></div>
-                <input type="password" class ="password" id="password1" placeholder="Повторите пароль">
-                <div class ="errorMessage" id="errorMessagePassword1"></div>
+                <div class="fname">
+                    <input type="text"  id="fname" placeholder="Имя">
+                    <div class ="errorMessage" id="errorMessageFname"></div>
+                </div>
+                <div class="lname">
+                    <input type="text"  id="lname" placeholder="Фамилия">
+                    <div class ="errorMessage" id="errorMessageLname"></div>
+                </div>
+                <div class="login">
+                    <input type="text" id="login" placeholder="Придумайте логин">
+                    <div  class ="errorMessage" id="errorMessageLogin"></div>
+                </div>
+                <div class="email">
+                    <input type="email"  id="email" placeholder="Email">
+                    <div class ="errorMessage" id="errorMessageEmail"></div>
+                </div>
+                <div class="password">
+                    <input type="password"  id="password" placeholder="Придумайте пароль">
+                    <div class ="errorMessage" id="errorMessagePassword"></div>
+                </div>
+                <div class="password">
+                    <input type="password" id="password1" placeholder="Повторите пароль">
+                    <div class ="errorMessage" id="errorMessagePassword1"></div>
+                </div>
             </div>
-            <button type="button" class = "submit" id="btn">Зарегистрироваться</button>
-            <div class ="successMessage" id="successMessage"></div>
+            <div class = "submit" >
+                <button type="button" id="btn">Зарегистрироваться</button>
+                <div class ="successMessage" id="successMessage"></div>
+            </div>
             <div class="signup">
                 <p>Уже есть аккаунт на Яндексе?
                 <a class="registration" href="https://passport.yandex.ru/auth?mode=register"
