@@ -16,12 +16,13 @@
         <input type="button" class = "botton" id="button" value="Send" onclick="CheckSpam()">
     </div>
     <script>
-        button.onclick=function CheckSpam(input){
-
-            let input=input.replace(/viagra/g, "***");
-            if (input !=""){
-                document.getElementById("message").innerHTML+=`${input}`;}
+        function CheckSpam(){
+            let textarea= document.getElementById("input").value;
+            let cleanTextarea=textarea.replace(/viagra/gi, "***");
+            if (cleanTextarea  !=""){
+                document.getElementById("message").innerHTML+=`${cleanTextarea}`;
             }
+        }
     </script>
 </body>
 </html>
