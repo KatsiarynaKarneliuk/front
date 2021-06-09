@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form">
+        <div class="fields" id="message"></div>
+        <input type="button" class = "botton" id="button" value="Send" onclick="generateSequence()">
+    </div>
+    <script>
+        
+        function generateSequence(min, max){   
+            return Math.random() * (max - min) + min;
+        }
+        let arrNumber=[];
+        let randomNumber = generateSequence(-8,8);
+        
+        arrNumber.forEach(function(randomNumber){
+                document.getElementById("message").innerHTML+=`${randomNumber}`;
+                arrNumber.push(randomNumber);
+        })
+        for (randomNumber of arrNumber){
+            alert(max(randomNumber))
+            alert(min(randomNumber))
+        }
+        arrNumber.length;
+        function average(arrNumber) {   /*средее арифметическое*/
+        return arrNumber.reduce((a, b) => (a + b)) / arrNumber.length;
+        }
+        alert(average(arrNumber))
+
+        function mult(arrNumber) {   /*результат умножения*/
+        return arrNumber.reduce((a, b) => (a * b));
+        }
+        alert(mult(arrNumber));
+
+        function sum(arrNumber) {   /*результат сложения*/
+        return arrNumber.reduce((a, b) => (a + b));
+        }
+        alert(sum(arrNumber));
+    
+
+    </script>
+</body>
+</html>
