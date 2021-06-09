@@ -15,24 +15,25 @@
     <script>
         
         function generateSequence(min, max){   
-            return Math.random() * (max - min) + min;
+            return Math.random(Math.random()) * (max - min) + min;
         }
+        
         let arrNumber=[];
         let randomNumber = generateSequence(-8,8);
         
         arrNumber.forEach(function(randomNumber){
-                document.getElementById("message").innerHTML+=`${randomNumber}`;
-                arrNumber.push(randomNumber);
+                document.getElementById("message").innerHTML+=`${randomNumber}`; /*хотела, чтобы выводилось число в textarea*/
+                arrNumber.push(randomNumber); /*а здесь, чтобы добавляло в массив, но не добавляет*/
         })
-        for (randomNumber of arrNumber){
-            alert(max(randomNumber))
-            alert(min(randomNumber))
-        }
+    
+        alert(Math.max(arrNumber));
+        alert(Math.min(arrNumber));
+        
         arrNumber.length;
         function average(arrNumber) {   /*средее арифметическое*/
         return arrNumber.reduce((a, b) => (a + b)) / arrNumber.length;
         }
-        alert(average(arrNumber))
+        alert(average(arrNumber));
 
         function mult(arrNumber) {   /*результат умножения*/
         return arrNumber.reduce((a, b) => (a * b));
