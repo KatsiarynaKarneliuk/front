@@ -9,42 +9,50 @@
 </head>
 <body>
     <div class="form">
-        <div class="fields" id="message"></div>
-        <input type="button" class = "botton" id="button" value="Send" onclick="generateSequence()">
+        <div class="fields" id="arr">Сгенерировали:</div>
+        <div class="fields" id="max">Максимальное число:</div>
+        <div class="fields" id="min">Минимальное число:</div>
+        <div class="fields" id="aver">Среднее арифметическое:</div>
+        <div class="fields" id="mult">Произведение чисел:</div>
+        <div class="fields" id="sum">Сумма чисел:</div>
+        <input type="button" class = "botton" id="button" value="Send" onclick="createList()">
     </div>
     <script>
         
         function generateSequence(min, max){   
-            return Math.random(Math.random()) * (max - min) + min;
+            return Math.floor(Math.random() * (max - min)) + min;
         }
-        
-        let arrNumber=[];
-        let randomNumber = generateSequence(-8,8);
-        
-        arrNumber.forEach(function(randomNumber){
-                document.getElementById("message").innerHTML+=`${randomNumber}`; /*хотела, чтобы выводилось число в textarea*/
-                arrNumber.push(randomNumber); /*а здесь, чтобы добавляло в массив, но не добавляет*/
-        })
-    
-        alert(Math.max(arrNumber));
-        alert(Math.min(arrNumber));
-        
-        arrNumber.length;
-        function average(arrNumber) {   /*средее арифметическое*/
-        return arrNumber.reduce((a, b) => (a + b)) / arrNumber.length;
-        }
-        alert(average(arrNumber));
+        function createList(){
+            let arrNumber=[];
+            for(let i=0; i<10-1;i++){                
+                    let randomNumber =generateSequence(-10,10);
+                    arrNumber.push(randomNumber);
+                    document.getElementById('arr').innerHTML+=randomNumber;
+                }
+            if (arrNumber.length===10){
+                function average(arrNumber) {   /*средее арифметическое*/
+                    arrNumber.length;
+                    averageVal= arrNumber.reduce((a, b) => (a + b)) / arrNumber.length;
+                    averageValFloor=Math.floor(averageVal); 
+                    }
+                let  aver=document.getElementById("#aver").innerHTML+= averageValFloor;
+            }
 
-        function mult(arrNumber) {   /*результат умножения*/
-        return arrNumber.reduce((a, b) => (a * b));
-        }
-        alert(mult(arrNumber));
+            function mult(arrNumber) {   /*результат умножения*/
+                return arrNumber.reduce((a, b) => (a * b));
+            }
+            alert(mult(Math.floor(arrNumber)));
 
-        function sum(arrNumber) {   /*результат сложения*/
-        return arrNumber.reduce((a, b) => (a + b));
+            function sum(arrNumber) {   /*результат сложения*/
+                return arrNumber.reduce((a, b) => (a + b));
+            }
+            alert(sum(Math.floor(arrNumber)));               
+
         }
-        alert(sum(arrNumber));
     
+        
+        
+        
 
     </script>
 </body>

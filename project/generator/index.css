@@ -1,7 +1,7 @@
 .form {
     display: flex;
     width: 600px;
-    height: 500px;
+    height: 700px;
     flex-direction: column;
 
     border: solid;
@@ -17,7 +17,12 @@
     border-color: black;
 }
 
-#message,
+#arr,
+#max,
+#min,
+#aver,
+#mult,
+#sum,
 #input {
     height: 50px;
     width: 400px;
