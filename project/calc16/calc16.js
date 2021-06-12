@@ -1,6 +1,9 @@
 
 let germanCities = ["Мюнхен", "Франкфурт"];
 let americanCities = ["Чикаго", "Хьюстон"];
+
+
+
 function selectCountry(country){
     if(country == "none"){
         document.getElementById("cities").style.display = "none";
@@ -9,29 +12,31 @@ function selectCountry(country){
     }
     let optionsString = "";
     if (country == "gem") {
-        for (let city of cities){
+        for (let city of germanCities){
             optionsString +=`<option>${city}</option>`;
             }
-        }
-        else if(country == "amer"){
-            for (let city of cities) {
-                optionString += `<option>${city}</option>`;}
-        } 
+        }else if(country == "amer"){
+            for (let city of americanCities) {
+                optionsString += `<option>${city}</option>`;
+                }
+            } 
         document.getElementById("cities").innerHTML = optionsString;
-        
+            
     }
-
+    
 function sumAll(){
-
+    sumImput=0;
+    sumSelects=0;
+    sum=0;
     checkedInputs=[];
     for(let input of checkedInputs){
         let input=document.querySelectorAll("input")
         if (input==checked){
             checkedInputs.push(+input);   
         }
-    sumImput=0;
+    
     for(let el of checkedInputs){
-        sum+=1;
+        sumImput+=1;
         } 
     return sumImput;   
     }
@@ -42,14 +47,14 @@ function sumAll(){
         if (option==checked){
             checkedInputs.push(+option);   
         }
-    sumSelects=0;
+    
     for(let el of checkedSelects){
-        sum+=1;
+        sumSelects+=1;
         } 
-    return sumSelect;   
+    return sumSelects;   
     }
 
-    let sumAll=(sumImput+sumSelect).value;
-    return sumAll;
+    sum+=(sumImput+sumSelects).value;
+    return sum;    
 }
 alert(sumAll());
