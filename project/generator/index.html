@@ -9,12 +9,12 @@
 </head>
 <body>
     <div class="form">
-        <div class="fields" id="arr">Сгенерировали:</div>
-        <div class="fields" id="max">Максимальное число:</div>
-        <div class="fields" id="min">Минимальное число:</div>
-        <div class="fields" id="aver">Среднее арифметическое:</div>
-        <div class="fields" id="mult">Произведение чисел:</div>
-        <div class="fields" id="sum">Сумма чисел:</div>
+        <div class="fields" id="arr">Сгенерировали: </div>
+        <div class="fields" id="max">Максимальное число: </div>
+        <div class="fields" id="min">Минимальное число: </div>
+        <div class="fields" id="aver">Среднее арифметическое: </div>
+        <div class="fields" id="mult">Произведение чисел: </div>
+        <div class="fields" id="sum">Сумма чисел: </div>
         <input type="button" class = "botton" id="button" value="Send" onclick="createList()">
     </div>
     <script>
@@ -24,36 +24,36 @@
         }
         function createList(){
             let arrNumber=[];
-            for(let i=0; i<10-1;i++){                
-                    let randomNumber =generateSequence(-10,10);
-                    arrNumber.push(randomNumber);
-                    document.getElementById('arr').innerHTML+=randomNumber;
-                }
-            if (arrNumber.length===10){
-                function average(arrNumber) {   /*средее арифметическое*/
-                    arrNumber.length;
-                    averageVal= arrNumber.reduce((a, b) => (a + b)) / arrNumber.length;
-                    averageValFloor=Math.floor(averageVal); 
-                    }
-                let  aver=document.getElementById("#aver").innerHTML+= averageValFloor;
+
+            for (let i=0; i<10; i++){                
+                let randomNumber =generateSequence(-10,10);
+                arrNumber.push(randomNumber);
+                document.getElementById('arr').innerHTML += randomNumber + " , ";
             }
+
+            function average(arrNumber) {   /*средее арифметическое*/
+                averageVal= arrNumber.reduce((a, b) => (a + b)) / arrNumber.length;
+               return Math.floor(averageVal); 
+            }
+            document.getElementById("aver").innerHTML += average(arrNumber);
+            
 
             function mult(arrNumber) {   /*результат умножения*/
                 return arrNumber.reduce((a, b) => (a * b));
             }
-            alert(mult(Math.floor(arrNumber)));
+            document.getElementById("mult").innerHTML += Math.floor(mult(arrNumber));
 
             function sum(arrNumber) {   /*результат сложения*/
                 return arrNumber.reduce((a, b) => (a + b));
             }
-            alert(sum(Math.floor(arrNumber)));               
+            document.getElementById("sum").innerHTML += Math.floor(sum(arrNumber)); 
 
+          
+            document.getElementById("max").innerHTML += Math.max(...arrNumber); 
+            
+         
+            document.getElementById("min").innerHTML += Math.min(...arrNumber);
         }
-    
-        
-        
-        
-
     </script>
 </body>
 </html>
