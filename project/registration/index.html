@@ -15,27 +15,27 @@
             <header class="header">Регистрация</header>
             <div class="fields">
                 <div class="fname">
-                    <input type="text"  id="fname" placeholder="Имя">
+                    <input type="text"  id="fname" placeholder="Имя" required>
                     <div class ="errorMessage" id="errorMessageFname"></div>
                 </div>
                 <div class="lname">
-                    <input type="text"  id="lname" placeholder="Фамилия">
+                    <input type="text"  id="lname" placeholder="Фамилия" required>
                     <div class ="errorMessage" id="errorMessageLname"></div>
                 </div>
                 <div class="login">
-                    <input type="text" id="login" placeholder="Придумайте логин">
+                    <input type="text" id="login" placeholder="Придумайте логин" required pattern="/^[a-z0-9_-]{3,16}$/">
                     <div  class ="errorMessage" id="errorMessageLogin"></div>
                 </div>
                 <div class="email">
-                    <input type="email"  id="email" placeholder="Email">
+                    <input type="email"  id="email" placeholder="Email" required >
                     <div class ="errorMessage" id="errorMessageEmail"></div>
                 </div>
                 <div class="password">
-                    <input type="password"  id="password" placeholder="Придумайте пароль">
+                    <input type="password"  id="password" placeholder="Придумайте пароль" required pattern ="/^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,}$/">
                     <div class ="errorMessage" id="errorMessagePassword"></div>
                 </div>
                 <div class="password">
-                    <input type="password" id="password1" placeholder="Повторите пароль">
+                    <input type="password" id="password1" placeholder="Повторите пароль" required>
                     <div class ="errorMessage" id="errorMessagePassword1"></div>
                 </div>
             </div>

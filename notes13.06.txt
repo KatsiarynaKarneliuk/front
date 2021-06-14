@@ -1,0 +1,8 @@
+onkeyup="document.getElementById('errorMessage').innerText =document.getElementById('text').value" 
+
+https://i.vgy.me/cUDa3P.png
+https://myscreen.s-ul.eu/r338byaA
+https://i.vgy.me/EcbDY8.png
+https://myscreen.s-ul.eu/CAy15HXk
+https://myscreen.s-ul.eu/oLr4sEx9
+https://myscreen.s-ul.eu/v2XFm8SF
