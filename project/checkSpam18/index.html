@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form">    
+        <div class="header">
+            <h3>Комментарии:</h3>
+        </div>       
+        <div>
+            <h4>Как вас зовут</h4>
+            <input type="text" class="fields" id="name" name ="name">
+        </div>
+        <div>
+            <h4>Добавьте аватар</h4>
+            <input type="text" class="fields" id="imgLink" name ="imgLink">
+        </div>
+        <div> 
+            <h4>Введите ваш комментарий</h4> 
+            <textarea class="textarea" id="comment" rows="5" name = "comment" cols="33"></textarea>
+        </div>
+        <div>
+            <h4>Проверьте ваш комментарий</h4>    
+            <textarea class="textarea" id="allComments" name = "allComments">                
+            </textarea>
+        </div>
+        <input type="button" class = "botton" id="button" value="Send" onclick="sendComment()">
+        </div>
+ 
+    <script>
+    let comments = [];  
+    document.addEventListener("DOMContentLoaded", function (event) {
+        let localStorageName = localStorage.getItem("name");
+        let allComments = localStorage.getItem("comments");
+        let localStorageImgLink = localStorage.getItem("imgLink");
+
+        if (localStorageName != null) {
+            document.getElementById("name").value = localStorageName; /*тут ожидаю, что  тем же полям присваивается Имя, ссылка на аватар*/
+        }   ​
+        if (localStorageImgLink != null) {
+            document.getElementById("imgLink").value = localStorageImgLink;
+        }    ​
+        if (allComments != null) {
+            document.getElementById("allComment").value += allComments; /*в поле Проверьте комментарий - все комменты польователя  */
+            comments = allComments;
+        }  
+    });
+
+    ​function setStorage(name, comment, imgLink) {
+        if (localStorage.getItem("name") == null) {
+            localStorage.setItem("name", name);
+        }
+    ​    if (localStorage.getItem("imgLink")==null) {
+            localStorage.setItem("imgLink", imgLink);
+        } 
+
+        localStorage.setItem("comments", comments);         
+    }  
+
+    function sendComment() {
+        let name  = document.getElementById("name").value;
+        let comment = document.getElementById("comment").value;
+        let imgLink = document.getElementById("imgLink").value;
+        if (name==null || comment == null) return;
+        else{
+            comments.push(comment);
+            document.getElementById('allComments').innerHTML += name + comment + imgLink;
+            setStorage(name,imageLink,comments);
+        }   
+    }        
+    </script>
+</body>
+</html>
