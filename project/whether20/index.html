@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class = "app-wrap">
+        <main>
+            <selection class = "location">
+                <div class = "city"></div>
+                <div class = "date"></div>
+            </selection>
+            <selection class = "current">
+                <div class = "temp"><span class = ""></div>
+                <div class = "weather"></div>
+                <div class = "hi-low"></div>
+            </selection>
+        </main>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event){
+            getweather('Moscow');
+        });
+    function getweather(city){
+            fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=e526bfed11f78738558fb0e84ea8f932&units=metric')
+                .then(response => response.json())
+                .then(weather => {
+                    console.log(weather);
+                    document.querySelector('.city').innerText = weather.name;
+                    document.querySelector('.temp').innerText = Math.round(weather.main.temp);
+                    document.querySelector('.hi-low').innerText = Math.round(weather.main.temp_max) + " / " + Math.round(weather.main.temp_min);
+                    document.querySelector('.weather').innerText = weather.weather[0].description;
+                })
+                .catch(error => console.log(error))
+        };
+    
+   </script>
+</body>
+</html>
