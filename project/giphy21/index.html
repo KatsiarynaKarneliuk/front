@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class = "app-wrap">
+        <main>
+            <p>Введите ключевое слово на английском:</p>
+            <input id = "search" type="text">
+            <button onclick='searchResult()'>Поиск</button>
+            <div id="giphies"></div>        
+        </main>
+    </div>
+    <script>
+    function searchResult(){  
+            let search = document.getElementById("search").value;     
+            fetch('https://api.giphy.com/v1/gifs/search?api_key=inQ6JlEIZ11SQsMlW3QdmQLhBB1YV8JM&q=' + search + '&limit=5&offset=0&rating=g&lang=en')
+                .then(response => response.json())
+                .then(result => {
+                    console.log(result);
+                    let giphyContent ="";
+                    for (let i = 0; i <result.data.length; i++) {
+                        giphyContent += 
+                        `
+                        <img src = "${result.data[i].images.original.url}">                                     
+                        `;
+            } 
+            document.getElementById("giphies").innerHTML = giphyContent;
+                })
+                .catch(error => console.log(error))
+    }
+    </script>
+</body>
+</html>
