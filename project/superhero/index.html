@@ -33,29 +33,49 @@
                     "alterago" : "Альтер эго : Кларк Кент",
                     "activities" : "Род деятельности : борец за справедливость",
                     "friends" : "Друзья : собака, Крипто",                   
-                    "superpower" : "Суперсилы : непробиваемость, суперсила, полет, самоисцеление, суперзрение и суперслух, классный костюм",
+                    "superpower" : "Суперсилы : непробиваемость, суперсила, полет, самоисцеление, суперзрение и суперслух, классный костюм"
                 },
                 "description": "Подробнее: полная противоположность своему противнику Бэтмену. Если Брюс Уэйн был простым человеком и стал героем, то Супермен героем родился, но вынужден был изображать выходца из бедной канзасской семьи. Последний представитель планеты Криптон был отправлен на Землю прямо перед тем, как его родина была уничтожена. Супермен — некий хамелеон от мира комиксов. В своем первом выпуске в 1938 году он был просто человек-огромный мускул, который умел только разбивать стены и выбивать двери. Позднее к его умениям добавилась способность летать. Дальше у многочисленных воплощений Кларка, от подростка в «Тайнах Смоллвиля» до величественного «Человека из стали», разный уровень и количество суперспособностей. Неизменным остается его слабое место — уязвимость к Криптониту, радиоактивному веществу с родной планеты.",
             }];
         let serrialHeroesSlider = JSON.stringify(jsonSuperheroes);
         let heroesSlider = JSON.parse(serrialHeroesSlider);
-        console.log(heroesSlider);
-        document.addEventListener("DOMContentLoaded", function(event){       
+        console.log(heroesSlider);    
+        
+        function showHeroes(){       
             let heroesContent = "" ;
-            for (hero of heroesSlider){
+            for (let i = 0; i < heroesSlider.length; i++) {
                 heroesContent += 
-                    `<div>
-                    <h2>${hero.title}</h2> 
-                    <img src = "${hero.photo}">
-                    <p>${hero.features.space}</p>
-                    <p>${hero.features.alterago}</p> 
-                    <p>${hero.features.activities}</p> 
-                    <p>${hero.features.friends}</p>
-                    <p>${hero.features.superpower}</p>                        
-                    <p>${hero.description}</p>                                     
+                    `<div class="hero">
+                    <h2>${jsonSuperheroes[i].title}</h2> 
+                    <img src = "${jsonSuperheroes[i].photo}">
+                    <p>${jsonSuperheroes[i].features.space}</p>
+                    <p>${jsonSuperheroes[i].features.alterago}</p> 
+                    <p>${jsonSuperheroes[i].features.activities}</p> 
+                    <p>${jsonSuperheroes[i].features.friends}</p>
+                    <p>${jsonSuperheroes[i].features.superpower}</p>                        
+                    <p>${jsonSuperheroes[i].description}</p>
+                    <p>Оценить:</p>
+                    <input id = "hero-${i}" type="number" min="1" max="5">
+                    <button onclick='setRating(${i})'>Отправить оценку</button>                                     
                     </div>`;
             } 
-            document.getElementById("heroesSlider").innerHTML = heroesContent;
+            document.getElementById("heroesSlider").innerHTML = heroesContent;                
+        }
+        function setRating(heroIndex) {
+            let value = document.getElementById("hero-" + heroIndex).value;
+            heroesSlider[heroIndex].rate = +value;
+            saveToLocalStorage();
+            showHeroes();
+        }
+        function saveToLocalStorage() {
+            localStorage.setItem("heroesSlider", JSON.stringify(heroesSlider));
+        }
+        function getFromLocalStorage() {
+            heroesSlider = JSON.parse(localStorage.getItem("heroesSlider"));
+        }
+        document.addEventListener("DOMContentLoaded", function(event){
+            getFromLocalStorage();
+            showHeroes();  
         });
     </script>
 </body>
