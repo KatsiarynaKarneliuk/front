@@ -46,32 +46,35 @@
             for (let i = 0; i < heroesSlider.length; i++) {
                 heroesContent += 
                     `<div class="hero">
-                    <h2>${jsonSuperheroes[i].title}</h2> 
-                    <img src = "${jsonSuperheroes[i].photo}">
-                    <p>${jsonSuperheroes[i].features.space}</p>
-                    <p>${jsonSuperheroes[i].features.alterago}</p> 
-                    <p>${jsonSuperheroes[i].features.activities}</p> 
-                    <p>${jsonSuperheroes[i].features.friends}</p>
-                    <p>${jsonSuperheroes[i].features.superpower}</p>                        
-                    <p>${jsonSuperheroes[i].description}</p>
+                    <h2>${heroesSlider[i].title}</h2> 
+                    <img src = "${heroesSlider[i].photo}">
+                    <p>${heroesSlider[i].features.space}</p>
+                    <p>${heroesSlider[i].features.alterago}</p> 
+                    <p>${heroesSlider[i].features.activities}</p> 
+                    <p>${heroesSlider[i].features.friends}</p>
+                    <p>${heroesSlider[i].features.superpower}</p>                        
+                    <p>${heroesSlider[i].description}</p>
                     <p>Оценить:</p>
-                    <input id = "hero-${i}" type="number" min="1" max="5">
+                    <input id = "hero-${i}" value=${heroesSlider[i].rate || 0} type="number" min="1" max="5">
                     <button onclick='setRating(${i})'>Отправить оценку</button>                                     
                     </div>`;
             } 
-            document.getElementById("heroesSlider").innerHTML = heroesContent;                
+            document.getElementById("heroesSlider").innerHTML = heroesContent;           
         }
         function setRating(heroIndex) {
             let value = document.getElementById("hero-" + heroIndex).value;
             heroesSlider[heroIndex].rate = +value;
             saveToLocalStorage();
+            getFromLocalStorage();
             showHeroes();
         }
         function saveToLocalStorage() {
             localStorage.setItem("heroesSlider", JSON.stringify(heroesSlider));
         }
         function getFromLocalStorage() {
-            heroesSlider = JSON.parse(localStorage.getItem("heroesSlider"));
+            if (localStorage.getItem("heroesSlider")  != null){
+                heroesSlider = JSON.parse(localStorage.getItem("heroesSlider"));
+            }
         }
         document.addEventListener("DOMContentLoaded", function(event){
             getFromLocalStorage();
