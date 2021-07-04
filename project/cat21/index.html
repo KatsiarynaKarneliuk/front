@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>События</title>
+</head>
+<body>
+    <form class ="formElem" id = "formElem">
+        <header class ="events">Введите имя вашего питомца</header>   
+        <input type = "text" id="name" required >    
+        <div class="errorMessage" id="errorMessage"></div>
+        <select name="breed" id="breed" onchange="show()">
+            <option disabled selected = "selected">Выберите породу</option>
+            <option value="Персидская">Персидская</option>
+            <option value="Cибирская">Cибирская</option>
+            <option value="Русская голубая">Русская голубая</option>
+        </select>
+        <div class="result">
+            <img src="" id="catImage" width="300">
+        </div>
+        <button type="submit" id ="btn">Нажать для проверки</button>
+    </form>
+<script src="index.js"></script>   
+</body>
+</html>
