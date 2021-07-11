@@ -1,0 +1,19 @@
+{
+  "name": "test-npm",
+  "version": "1.0.0",
+  "description": "test projct",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify-shim": "^3.8.14",
+    "chart.js": "^3.4.1",
+    "cleave.js": "^1.6.0",
+    "js-datepicker": "^5.18.0",
+    "moment": "^2.29.1",
+    "save": "^2.4.0"
+  }
+}
